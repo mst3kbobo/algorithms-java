@@ -1,0 +1,17 @@
+# Gradle
+.gradle
+gradle/wrapper/*.jar
+gradlew
+gradlew.bat
+/build
+
+# Java
+*.class
+*.jar
+
+# IDE
+*.iml
+/.idea
+
+# OS
+.DS_Store
