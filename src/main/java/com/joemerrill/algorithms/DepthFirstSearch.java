@@ -25,23 +25,23 @@ public class DepthFirstSearch {
          */
 
         // A: Root Node
-        Node a = new Node("A");
+        DepthFirstSearch.Node a = new DepthFirstSearch.Node("A");
 
         // A's Children
-        Node b = a.addChild("B");
+        DepthFirstSearch.Node b = a.addChild("B");
         a.addChild("C");
         Node d = a.addChild("D");
 
         // B's Children
         b.addChild("E");
-        Node f = b.addChild("F");
+        DepthFirstSearch.Node f = b.addChild("F");
 
         // F's Children
         f.addChild("I");
         f.addChild("J");
 
         // D's Children
-        Node g = d.addChild("G");
+        DepthFirstSearch.Node g = d.addChild("G");
         d.addChild("H");
 
         // G's Children
@@ -52,7 +52,8 @@ public class DepthFirstSearch {
     }
 
     /**
-     * Node Class: Includes Depth-first Search method
+     * Node Class
+     * with Depth-first Search method
      */
     public static class Node {
         private String name;
@@ -63,14 +64,14 @@ public class DepthFirstSearch {
             this.children = new ArrayList<Node>();
         }
 
-        public int retrieveNumberOfChildren() {
-            return this.children.size();
+        public int numberOfChildren() {
+            return children.size();
         }
 
         /**
-         * Creates a Node with the provided name as a child of the receiver.
-         * @param name
-         * @return the newly created Child Node
+         * Creates a Node and adds it as a child of the receiver.
+         * @param name the name of the Child Node.
+         * @return the newly created Child Node.
          */
         public Node addChild(String name) {
             Node child = new Node(name);
@@ -79,9 +80,11 @@ public class DepthFirstSearch {
         }
 
         /**
-         * v = vertex, e = edge
+         * Depth-first search algorithm.
+         * Space Time Complexity (v = vertex, e = edge):
          * Time: O(v+e)
          * Space: O(v)
+         *
          * @return List of all explored vertices (nodes)
          */
         public List<String> depthFirstSearch(List<String> arrayList) {

@@ -12,7 +12,18 @@ class DepthFirstSearchTest {
     @Test
     public void depthFirstSearchGraphTest() {
 
-        // Build Graph of Nodes
+        /* Build Graph of Nodes
+
+              A
+           /  |  \
+          B   C   D
+         / \     / \
+        E   F   G   H
+           / \   \
+          I   J   K
+
+         */
+
         // A: Root Node
         DepthFirstSearch.Node a = new DepthFirstSearch.Node("A");
 
@@ -36,9 +47,9 @@ class DepthFirstSearchTest {
         // G's Children
         g.addChild("K");
 
-        assertEquals(3, a.retrieveNumberOfChildren(),
+        assertEquals(3, a.numberOfChildren(),
                 "The number of child nodes expected for A is incorrect.");
-        assertEquals(0, c.retrieveNumberOfChildren(),
+        assertEquals(0, c.numberOfChildren(),
                 "The number of child nodes expected for C is incorrect.");
 
         List<String> result = a.depthFirstSearch(new ArrayList<String>());
