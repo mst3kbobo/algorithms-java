@@ -7,8 +7,12 @@ import java.util.Queue;
 
 /**
  * Solution:
- * 1) Start at root node and call BFS method on the Node. Add it to the final output list.
- * 2) Explore the children of that node and call the BFS method on them passing in the final output list.
+ * 1) Start at root node and call BFS method on the Node.
+ * 2) The node is added to a Queue.
+ * 3) A while loop begins and continues as long as the Queue is not empty.
+ * 4) Inside the while loop, the Node at the head of the Queue is polled (retrieved and removed).
+ * 5) It's name is added to an output array and its children are added to the tail of the Queue.
+ * 6) This continues until the Queue is empty. At which, the entire graph has been explored in a BFS method.
  */
 public class BreadthFirstSearch {
 
@@ -87,11 +91,6 @@ public class BreadthFirstSearch {
          * Space Time Complexity (v = vertex, e = edge):
          * Time: O(v+e)
          * Space: O(v)
-         *
-         * 1) The Node the method is called on is added to a queue.
-         * 2) Then loop while the queue is empty.
-         * 3) Poll the queue for the Node at the head and add it to the output array.
-         * 4) Add the children of the Node to the Queue. Which are added to the tail.
          *
          * @return List of Nodes traversed via Breadth-first search.
          */

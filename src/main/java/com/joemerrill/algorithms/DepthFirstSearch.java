@@ -5,8 +5,11 @@ import java.util.List;
 
 /**
  * Solution:
- * 1) Start at root node and call DFS method on the Node. Add it to the final output list.
- * 2) Explore the children of that node and call the DSF method on them passing in the final output list.
+ * 1) Start at root node and call DFS method on the Node. Pass in a reference to an empty ArrayList which will be
+ *    used to store the final output of nodes traversed.
+ * 2) Add the nodes name to the output array.
+ * 3) Explore (for-each loop) the children of the Node and call the DFS method on them.
+ *    Pass in the reference to the output ArrayList so the children can be added. This appears in "recursive" manner.
  */
 public class DepthFirstSearch {
 
