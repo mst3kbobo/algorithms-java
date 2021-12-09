@@ -10,13 +10,14 @@ class ValidateSubsequenceTest {
     void validateSubsequenceTest() {
 
         ValidateSubsequence vs = new ValidateSubsequence();
+
         assertEquals(true,
-                vs.validateSubsequence(new int[]{5, 1, 22, 25, 6, -1, 8, 10}, new int[]{1, 6, -1, 10})
+                vs.isValidSubsequence(new int[]{5, 1, 22, 25, 6, -1, 8, 10}, new int[]{1, 6, -1, 10})
         );
         assertEquals(false,
-                vs.validateSubsequence(new int[]{5, 1, 22, 25, 18, -1, 8, 10}, new int[]{1, 6, -1, 10})
+                vs.isValidSubsequence(new int[]{5, 1, 22, 25, 18, -1, 8, 10}, new int[]{1, 6, -1, 10})
         );
-        assertEquals(true, vs.validateSubsequence(new int[]{5, 1}, new int[]{5, 1}));
-        assertEquals(false, vs.validateSubsequence(new int[]{5, 1}, new int[]{5, 1, 8, 16}));
+        assertEquals(true, vs.isValidSubsequence(new int[]{5, 1}, new int[]{5, 1}));
+        assertEquals(false, vs.isValidSubsequence(new int[]{5, 1}, new int[]{5, 1, 8, 16}));
     }
 }
