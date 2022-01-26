@@ -1,8 +1,8 @@
 package com.joemerrill.algorithms;
 
 /**
- * Validate Subsequence
- * Given two arrays of integers, determine whether the second array is a subsequence of the first array.
+ * Validate Subsequence: Given two non-empty arrays of integers, determine whether the second array is a
+ * subsequence of the first array.
  */
 public class ValidateSubsequence {
 
@@ -10,22 +10,23 @@ public class ValidateSubsequence {
 
         int[] mainArray = new int[]{5, 1, 22, 25, 6, -1, 8, 10};
         int[] sequenceArray = new int[]{1, 6, -1, 10};
+        // Expected Result: true
 
-        System.out.println(validateSubsequence(mainArray, sequenceArray));
+        System.out.println(isValidSubsequence(mainArray, sequenceArray));
     }
 
     /**
      * Uses while and "Tracking" indexes to determine where we are in the arrays.
      * Time: O(n) traverse the entire main array
      * Space: O(1)
-     * @param array
-     * @param sequence
-     * @return
+     * @param array the main array
+     * @param sequence the sequence array
+     * @return true if sequence array is a subsequence of the main array. Otherwise, false.
      */
-    public static boolean validateSubsequence(int[] array, int[] sequence) {
+    public static boolean isValidSubsequence(int[] array, int[] sequence) {
 
-        // No need to do any work if the length of the sequence is greater than the length of the main array.
-        // The subsequence cannot exist in this edge case.
+        // Edge Case: No need to do any work if the length of the sequence is greater than
+        // the length of the main array because the subsequence cannot exist in this case.
         if (sequence.length > array.length) {
             return false;
         }
