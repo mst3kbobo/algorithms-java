@@ -4,9 +4,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 /**
- * Two Number Sum
- * Take an array of unique integers and a target integer. If any two distinct numbers sum the target, return them as
- * an array. Otherwise, return an empty array.
+ * Two Number Sum: Method takes in an array of unique integers and a target integer.
+ * If any two distinct numbers sum the target, return them as an array. Otherwise, return an empty array.
  */
 public class TwoNumberSum {
 

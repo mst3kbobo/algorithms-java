@@ -6,13 +6,16 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * Solution:
- * 1) Start at root node and call BFS method on the Node.
- * 2) The node is added to a Queue.
- * 3) A while loop begins and continues as long as the Queue is not empty.
- * 4) Inside the while loop, the Node at the head of the Queue is polled (retrieved and removed).
- * 5) It's name is added to an output array and its children are added to the tail of the Queue.
- * 6) This continues until the Queue is empty. At which, the entire graph has been explored in a BFS method.
+ * Breadth-first Search (DFS) Algorithm
+ * <p>Solution:</p>
+ * <ol>
+ *     <li>Start at root node and call BFS method on the Node.</li>
+ *     <li>The node is added to a Queue.</li>
+ *     <li>A while loop begins and continues as long as the Queue is not empty.</li>
+ *     <li>Inside the while loop, the Node at the head of the Queue is polled (retrieved and removed).</li>
+ *     <li>It's name is added to an output array and its children are added to the tail of the Queue.</li>
+ *     <li>This continues until the Queue is empty. At which, the entire graph has been explored in a BFS method.</li>
+ * </ol>
  */
 public class BreadthFirstSearch {
 
@@ -58,8 +61,7 @@ public class BreadthFirstSearch {
     }
 
     /**
-     * Node Class
-     * with Breadth-first Search method
+     * Node Class with Breadth-first Search method
      */
     public static class Node {
 

@@ -1,2 +1,8 @@
 # algorithms-java
-Project for learning algorithms using Java.
+
+Playground project for learning and experimenting with algorithms using Java.
+
+* BreadthFirstSearch
+* DepthFirstSearch
+* TwoNumberSum
+* ValidateSubsequence

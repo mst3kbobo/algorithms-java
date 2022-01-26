@@ -1,8 +1,8 @@
 package com.joemerrill.algorithms;
 
 /**
- * Validate Subsequence
- * Given two non-empty arrays of integers, determine whether the second array is a subsequence of the first array.
+ * Validate Subsequence: Given two non-empty arrays of integers, determine whether the second array is a
+ * subsequence of the first array.
  */
 public class ValidateSubsequence {
 
