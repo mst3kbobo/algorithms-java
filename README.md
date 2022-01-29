@@ -2,6 +2,7 @@
 
 Playground project for learning and experimenting with algorithms using Java.
 
+* BinarySearch
 * BreadthFirstSearch
 * DepthFirstSearch
 * NthFibonacci
