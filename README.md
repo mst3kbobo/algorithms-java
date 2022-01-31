@@ -4,6 +4,7 @@ Playground project for learning and experimenting with algorithms using Java.
 
 * BinarySearch
 * BreadthFirstSearch
+* BubbleSort
 * DepthFirstSearch
 * NthFibonacci
 * TwoNumberSum
