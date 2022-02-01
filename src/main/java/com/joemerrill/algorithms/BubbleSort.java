@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 /**
  * This program demonstrates a Bubble Sort algorithm.
- * The method take an unsorted array of integers and returns it sorted.
  */
 public class BubbleSort {
 
@@ -17,7 +16,7 @@ public class BubbleSort {
     }
 
     /**
-     * Bubble Sort Algorithm
+     * Bubble Sort Algorithm. The method takes an unsorted array of integers and returns it sorted smallest to greatest.
      * Complexity Analysis:
      * - Time: O(n^2) for the while unsorted loop and nested for loops
      * - Space: O(1)
@@ -39,7 +38,7 @@ public class BubbleSort {
             for (int i = 0; i < array.length - 1 - counter; i++) {
                 if (array[i] > array[i + 1]) {
                     swap(i, i + 1, array);
-                    isSorted = false;
+                    isSorted = false; // Set to false because array was not sorted.
                 }
             }
 
