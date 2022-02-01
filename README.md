@@ -6,9 +6,10 @@ Playground project for learning and experimenting with algorithms using Java.
 * BreadthFirstSearch
 * BubbleSort
 * DepthFirstSearch
+* FindNLargestNumbers
 * NthFibonacci
-* TwoNumberSum
 * ThreeNumberSum
+* TwoNumberSum
 * ValidateSubsequence
 
 #### List of resources used for learning:
