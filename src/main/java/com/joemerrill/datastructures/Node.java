@@ -4,10 +4,12 @@ public class Node {
 
     private String data;
     private Node next;
+    private Node previous; // Previous and its getters/setters are used for Doubly Linked Lists
 
     public Node(String data) {
         this.data = data;
         this.next = null;
+        this.previous = null;
     }
 
     public String getData() {
@@ -18,12 +20,24 @@ public class Node {
         return next;
     }
 
+    public Node getPrevious() {
+        return previous;
+    }
+
     public boolean hasNext() {
         return next != null;
     }
 
+    public boolean hasPrevious() {
+        return previous != null;
+    }
+
     public void setNext(Node next) {
         this.next = next;
+    }
+
+    public void setPrevious(Node previous) {
+        this.previous = previous;
     }
 
     public static void main(String[] args) {
