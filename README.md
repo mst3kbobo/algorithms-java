@@ -2,6 +2,8 @@
 
 Playground project for learning and experimenting with algorithms using Java.
 
+**algorithms**
+
 * BinarySearch
 * BreadthFirstSearch
 * BubbleSort
@@ -11,6 +13,12 @@ Playground project for learning and experimenting with algorithms using Java.
 * ThreeNumberSum
 * TwoNumberSum
 * ValidateSubsequence
+
+**datastructures**
+
+* LinkedList (Singly)
+* DoublyLinkedList
+* Node
 
 #### List of resources used for learning:
 * AlgoExpert - https://www.algoexpert.io
