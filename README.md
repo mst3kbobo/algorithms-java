@@ -17,6 +17,7 @@ Playground project for learning and experimenting with algorithms using Java.
 **datastructures**
 
 * LinkedList (Singly)
+* DoublyLinkedList
 * Node
 
 #### List of resources used for learning:
