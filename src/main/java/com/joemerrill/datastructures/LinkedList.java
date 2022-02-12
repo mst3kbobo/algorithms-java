@@ -162,6 +162,58 @@ public class LinkedList {
         return output;
     }
 
+    /**
+     * Find the nth last node in the linked list.
+     * - Time: O(n) for full iteration through list
+     * - Space: O(1) variables to keep track of nodes
+     * @param number nth last node to find. (e.g., 5 would be the 5th from last node)
+     * @return node at nth last position, null if number is greater than length of list.
+     */
+    public Node nthLastNode(int number) {
+
+        Node tailTracker = head;
+        Node nthTracker = null;
+        int counter = 0;
+
+        // Delay the nth tracker behind the tail tracker by the request number.
+        while (tailTracker != null) {
+            tailTracker = tailTracker.getNext();
+            if (counter >= number) {
+                if (nthTracker == null) {
+                    nthTracker = head;
+                }
+                nthTracker = nthTracker.getNext();
+            }
+            counter += 1;
+        }
+
+        return nthTracker;
+    }
+
+    /**
+     * Find the middle node in the linked list. If there is an even amount of nodes in the list, this method will return
+     * the node at the beginning of the 2nd half. (E.g., A->B->C->D will return C)
+     * - Time: O(n) for full iteration through list
+     * - Space: O(1) variables to keep track of nodes
+     * @return Middle Node in the linked list.
+     */
+    public Node middleNode() {
+
+        Node tailTracker = head;
+        Node middleTracker = head;
+
+        // Move tail tracker at twice the rate of the middle tracker.
+        while (tailTracker != null) {
+            tailTracker = tailTracker.getNext();
+            if (tailTracker != null) {
+                tailTracker = tailTracker.getNext();
+                middleTracker = middleTracker.getNext();
+            }
+        }
+
+        return middleTracker;
+    }
+
     public static void main(String[] args) {
 
         LinkedList seasons = new LinkedList();
@@ -179,14 +231,32 @@ public class LinkedList {
         System.out.println("Removed Node Data: " + removedNodeData);
         seasons.printList();
 
+        //
         // Swap Test
-        LinkedList numbers = new LinkedList();
+        //
+        LinkedList swapNumbersTest = new LinkedList();
         for (int i = 0; i <= 5; i++) {
+            swapNumbersTest.addToTail(Integer.toString(i));
+        }
+
+        swapNumbersTest.printList();
+        swapNumbersTest.swap("2", "4");
+        swapNumbersTest.printList();
+
+        //
+        // Two Pointers (Runner Technique)
+        //
+        LinkedList numbers = new LinkedList();
+        for (int i = 0; i <= 20; i++) {
             numbers.addToTail(Integer.toString(i));
         }
 
         numbers.printList();
-        numbers.swap("2", "4");
-        numbers.printList();
+
+        Node fifthFromLastNode = numbers.nthLastNode(5);
+        System.out.println("5th From Last Node Data: " + fifthFromLastNode.getData());
+
+        Node middleNode = numbers.middleNode();
+        System.out.println("Middle Node Data: " + middleNode.getData());
     }
 }
