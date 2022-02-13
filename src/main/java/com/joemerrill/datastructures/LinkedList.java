@@ -11,6 +11,10 @@ public class LinkedList {
         this.head = null;
     }
 
+    public Node getHead() {
+        return head;
+    }
+
     public void addToHead(String data) {
 
         Node currentHead = head;
@@ -143,9 +147,10 @@ public class LinkedList {
         nodeB.setNext(temp);
     }
 
-    public String printList() {
+    @Override
+    public String toString() {
 
-        String output = "{HEAD} -> ";
+        String output = "LinkedList{<HEAD> -> ";
 
         Node currentNode = head;
 
@@ -155,7 +160,14 @@ public class LinkedList {
             currentNode = currentNode.getNext();
         }
 
-        output += "{TAIL}";
+        output += "<TAIL>}";
+
+        return output;
+    }
+
+    public String printList() {
+
+        String output = toString();
 
         System.out.println(output);
 
