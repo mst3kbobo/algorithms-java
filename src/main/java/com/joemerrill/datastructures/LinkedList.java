@@ -11,6 +11,10 @@ public class LinkedList {
         this.head = null;
     }
 
+    public Node getHead() {
+        return head;
+    }
+
     public void addToHead(String data) {
 
         Node currentHead = head;
