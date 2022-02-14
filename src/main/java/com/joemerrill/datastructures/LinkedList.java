@@ -226,6 +226,41 @@ public class LinkedList {
         return middleTracker;
     }
 
+    /**
+     * Iterative approach to finding a node based on input data.
+     * @param data Node to find based on the String data passed to the method.
+     * @return Node if found in the linked list. Otherwise, null.
+     */
+    public Node findNodeIteratively(String data) {
+        Node current = head;
+
+        while (current != null) {
+            if (current.getData().equals(data)) {
+                return current;
+            }
+            current = current.getNext();
+        }
+
+        return null;
+    }
+
+    /**
+     * Recursive approach to finding a node based on input data.
+     * @param data Node to find based on the String data passed to the method.
+     * @param currentNode Current Node to check. Typically the head node of the list when starting the recursive search.
+     * @return Node if found in the linked list. Otherwise, null.
+     */
+    public Node findNodeRecursively(String data, Node currentNode) {
+
+        if (currentNode == null) {
+            return null; // Base Case 1: Tail of List
+        } else if (currentNode.getData().equals(data)) {
+            return currentNode; // Base Case 2: Found Node
+        } else {
+            return findNodeRecursively(data, currentNode.getNext()); // Recursive Case
+        }
+    }
+
     public static void main(String[] args) {
 
         LinkedList seasons = new LinkedList();
@@ -270,5 +305,19 @@ public class LinkedList {
 
         Node middleNode = numbers.middleNode();
         System.out.println("Middle Node Data: " + middleNode.getData());
+
+        //
+        // Find Nodes Iteratively and Recursively
+        //
+        // Find Node iteratively:
+        LinkedList test = new LinkedList();
+        test.addToHead("one");
+        test.addToTail("two");
+        test.addToTail("three");
+        test.addToTail("four");
+        Node foundNodeIterative = test.findNodeIteratively("three");
+        System.out.println("foundNodeIterative: " + foundNodeIterative.getData());
+        Node foundNodeRecursive = test.findNodeIteratively("two");
+        System.out.println("foundNodeRecursive: " + foundNodeRecursive.getData());
     }
 }

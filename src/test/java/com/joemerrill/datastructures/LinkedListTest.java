@@ -52,4 +52,26 @@ class LinkedListTest {
         assertEquals("10", testListA.middleNode().getData());
         assertEquals("2", testListB.middleNode().getData());
     }
+
+    @Test
+    void findNodeIterativelyTest() {
+        System.out.println("Running: findNodeIterativelyTest");
+
+        Node findFour = testListB.findNodeIteratively("4");
+        Node findSixExpectNull = testListB.findNodeIteratively("6");
+
+        assertEquals("4", findFour.getData());
+        assertNull(findSixExpectNull);
+    }
+
+    @Test
+    void findNodeRecursivelyTest() {
+        System.out.println("Running: findNodeRecursivelyTest");
+
+        Node findFour = testListB.findNodeRecursively("4", testListB.getHead());
+        Node findSixExpectNull = testListB.findNodeRecursively("6", testListB.getHead());
+
+        assertEquals("4", findFour.getData());
+        assertNull(findSixExpectNull);
+    }
 }
