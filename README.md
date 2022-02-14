@@ -20,7 +20,10 @@ Playground project for learning and experimenting with algorithms using Java.
 * DoublyLinkedList
 * Queue
 * Stack
+* HashMap
 * Node
+
+Note the purpose of these data structures is to gain an understanding rather than create production-level structures.
 
 #### List of resources used for learning:
 * AlgoExpert - https://www.algoexpert.io
