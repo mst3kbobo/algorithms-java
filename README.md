@@ -22,6 +22,7 @@ Playground project for learning and experimenting with algorithms using Java.
 * Stack
 * HashMap
 * Node
+* Tree and TreeNode
 
 Note the purpose of these data structures is to gain an understanding rather than create production-level structures.
 
