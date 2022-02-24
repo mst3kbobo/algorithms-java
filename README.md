@@ -23,6 +23,7 @@ Playground project for learning and experimenting with algorithms using Java.
 * HashMap
 * Node
 * Tree and TreeNode
+* MinHeap
 
 Note the purpose of these data structures is to gain an understanding rather than create production-level structures.
 
